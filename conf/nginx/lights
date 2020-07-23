@@ -1,0 +1,11 @@
+server {
+	listen 80;
+	server_name 192.168.1.79;
+	access_log /var/log/nginx/lights_access.log;
+	error_log /var/log/nginx/lights_error.log;
+
+	location / {
+		include uwsgi_params;
+		uwsgi_pass unix:///var/lights/lights.sock;
+	}
+}

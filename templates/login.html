@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+	<div id="login-content-box" class="content-box" {% if incorrectLogin is sameas true %}style="height: 360px;"{% endif %}>
+		<div class="title-box">
+			<h2 class="title">Lighting Control Panel Login</h2>
+		</div>
+		<div id="incorrect-login-banner" {% if incorrectLogin is sameas true %}style="display: block;"{% endif %}>
+			<h4>Login incorrect!</h4>
+		</div>
+		<form name="login" id="login" action="/login" method="POST">
+			<div id="login-box-container" class="display-box">
+				<label class="login-label" for="username">
+					Username
+					<input class="login-input" name="username" type="text" value="">
+					<br>
+				</label>
+				<label class="login-label" for="password">
+					Password
+					<input class="login-input" name="password" type="password" value="">
+					<br>
+				</label>
+			</div>
+			<input type="submit" class="submit" value="Login"/>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lighting Control Panel</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<script type="text/javascript" src="../static/js/lights.js"></script>
+</head>
+<body>
+	<div id="index-content-box" class="content-box">
+		<div class="title-box">
+			<h2 class="title">Lighting Control Panel</h2>
+		</div>
+		<form name="light-settings" id="light-settings" action="/" method="POST">
+			<div id="light-settings-container">
+				<div id="styles" class="display-box">
+					<h4 class="subtitle">Style:</h4>
+					<label class="settings-label" for="rainbow-circle">
+						Rainbow Circle
+						<input name="style" type="radio" value="rainbow-circle" onclick="change_handler(value)" {% if style=='rainbow-circle' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="animated-rainbow">
+						Animated Rainbow
+						<input name="style" type="radio" value="animated-rainbow" onclick="change_handler(value)" {% if style=='animated-rainbow' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="pixel-pileup">
+						Pixel Pileup
+						<input name="style" type="radio" value="pixel-pileup" onclick="change_handler(value)" {% if style=='pixel-pileup' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="rainbow-pixel-pileup">
+						Rainbow Pixel Pileup
+						<input name="style" type="radio" value="rainbow-pixel-pileup" onclick="change_handler(value)" {% if style=='rainbow-pixel-pileup' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="pixel-run">
+						Pixel Run
+						<input name="style" type="radio" value="pixel-run" onclick="change_handler(value)" {% if style=='pixel-run' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="rainbow-pixel-run">
+						Rainbow Pixel Run
+						<input name="style" type="radio" value="rainbow-pixel-run" onclick="change_handler(value)" {% if style=='rainbow-pixel-run' %}checked{% endif %}>
+						<br>
+					</label>
+					<label class="settings-label" for="solid-color">
+						Solid Color
+						<input name="style" type="radio" value="solid-color" onclick="change_handler(value)" {% if style=='solid-color' %}checked{% endif %}>
+						<br>
+					</label>
+				</div>
+				<div id="style-settings" class="display-box">
+					<h4 class="subtitle">Style Settings:</h4>
+					<label class="settings-label" for="offset" id="offset-label">
+						Offset: 
+						<input type="range" id="offset" name="offset" min="0" max="100" value="{{ offset }}">
+						<br>
+					</label>
+					<label class="settings-label" for="speed" id="speed-label">
+						Speed: 
+						<input type="range" id="speed" name="speed" min="1" max="100" value="{{ speed }}">
+						<br>
+					</label>
+					<label class="settings-label" for="color-picker" id="color-picker-label">
+						Colour: 
+						<input type="color" id="color-picker" name="color-choice" value="{{ color }}">
+						<br>
+					</label>
+				</div>
+			</div>
+			<input type="submit" id="index-submit" class="submit" value="Update"/>
+		</form>
+	</div>
+	<a id="logout" href="logout">logout</a>
+	<script type="text/javascript">change_handler("{{ style }}")</script>
+</body>
+</html>

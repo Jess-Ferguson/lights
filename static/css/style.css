@@ -1,0 +1,113 @@
+body {
+	background-color: #141d26;
+	font-family: "Titillium Web";
+	text-align: center;
+}
+
+div.content-box {
+	background-color: #243447;
+	margin: 50px auto;
+	position: relative;
+	width: 60%;
+	text-align: center;
+	overflow: hidden;
+}
+
+#index-content-box {
+	height: 475px;
+}
+
+#login-content-box {
+	height: 325px; /* 360px with error, 325px without */
+	text-align: center;
+	float: center;
+}
+
+#light-settings {
+	text-align: center;
+	width: 100%;
+}
+
+div.title-box,
+div.display-box {
+	background-color: #141d26;
+	color: #c51f5d;
+}
+
+#styles,
+#style-settings {
+	display: inline-block;
+	height: 300px;
+	overflow: hidden;
+	width: 49.5%;
+	margin-right: 0px;
+}
+
+div.title-box {
+	width: 99.3%;
+	margin: -25px auto -25px auto;
+}
+
+#styles {
+	margin-left: 0px;
+}
+
+#style-settings {
+	margin-right: 0px;
+}
+
+h2.title {
+	padding: 10px 0px 15px 0px;
+	font-size: 35px;
+}
+
+.subtitle {
+	margin: 15px 0px 10px 0px;
+	font-size: 25px;
+	text-align: center;
+}
+
+.settings-label {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.login-label {
+	color: #ffffff;
+	font-size: 30px;
+}
+
+input.submit {
+	width: 99.3%;
+	font-size: 50px;
+	padding: 6px 0px 6px 0px;
+}
+
+#login-box-container {
+	display: inline-block;
+	width: 99.3%;
+	height: 150px;
+	margin-bottom: 5px;
+}
+
+.login-input {
+	width: 80%;
+	height: 50px;
+	margin-top: 10px;
+	font-size: 30px;
+}
+
+#incorrect-login-banner {
+	background-color: #c51f5d;
+	color: #ffffff;
+	width: 99.3%;
+	height: 30px;
+	margin: 20px auto 5px auto;
+	display: none;
+}
+
+#logout {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 15px;
+}
